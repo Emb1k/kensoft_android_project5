@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ecebb2"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              >
+
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"/>
+
+            <ImageButton
+                android:layout_width="66dp"
+                android:layout_height="63dp"
+                android:contentDescription="@string/marker6_title"
+                android:onClick="onClickButtonMarker"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home"
+                android:tag="@string/marker6_id"
+                android:text="@string/marker6_title" />
+
+            <ImageButton
+                android:layout_width="68dp"
+                android:layout_height="63dp"
+                android:contentDescription="@string/marker1_title"
+                android:onClick="onClickButtonMarker"
+                android:scaleType="fitCenter"
+                android:src="@drawable/psu"
+                android:tag="@string/marker1_id"
+                android:text="@string/marker1_title"/>
+
+            <ImageButton
+                android:layout_width="66dp"
+                android:layout_height="63dp"
+                android:contentDescription="@string/marker2_title"
+                android:onClick="onClickButtonMarker"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ineu"
+                android:tag="@string/marker2_id"
+                android:text="@string/marker2_title"/>
+
+            <ImageButton
+                android:layout_width="66dp"
+                android:layout_height="63dp"
+                android:contentDescription="@string/marker3_title"
+                android:onClick="onClickButtonMarker"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ppu"
+                android:tag="@string/marker3_id"
+                android:text="@string/marker3_title"/>
+
+            <ImageButton
+                android:layout_width="66dp"
+                android:layout_height="63dp"
+                android:contentDescription="@string/marker4_title"
+                android:onClick="onClickButtonMarker"
+                android:scaleType="fitCenter"
+                android:src="@drawable/avpv"
+                android:tag="@string/marker4_id"
+                android:text="@string/marker4_title" />
+
+            <ImageButton
+                android:layout_width="66dp"
+                android:layout_height="63dp"
+                android:contentDescription="@string/marker5_title"
+                android:onClick="onClickButtonMarker"
+                android:scaleType="fitCenter"
+                android:src="@drawable/batyrmall"
+                android:tag="@string/marker5_id"
+                android:text="@string/marker5_title" />
+
+            <ImageButton
+                android:layout_width="66dp"
+                android:layout_height="63dp"
+                android:contentDescription="@string/marker7_title"
+                android:onClick="onClickButtonMarker"
+                android:scaleType="fitCenter"
+                android:src="@drawable/small"
+                android:tag="@string/marker7_id"
+                android:text="@string/marker7_title" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <fragment
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        tools:context="kz.talipovsn.map.MapsActivity"/>
+
+    <Button
+        android:id="@+id/detailButton"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#f9f9f0"
+        android:onClick="detailButtonClick"
+        android:text="@string/detail"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:id="@+id/sv1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4c6"
+        android:gravity="center_vertical|center_horizontal">
+
+        <TextView
+            android:id="@+id/textViewInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:background="#f4f4c6"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textIsSelectable="false"/>
+
+    </ScrollView>
+
+
+</LinearLayout>
